@@ -1,0 +1,16 @@
+<template>
+    <lightning-card title="Opportunidades Recentes" icon-name="custom:custom14">
+        <ul class="slds-m-around_medium">
+            <template for:each={listOpportunies} for:item="opportunity">
+                <lightning-card  title={opportunity.Name} key={opportunity.Id} icon-name="custom:custom55">
+                    <li class="slds-m-left_large">
+                        <p><b>Valor:</b> R$ {opportunity.Amount}</p>
+                        <p><b>Fase:</b> {opportunity.StageName}</p>
+                        <p><b>Data de Fechamento: </b> {opportunity.CloseDate}</p>
+                    </li>
+                </lightning-card>
+            </template>
+        </ul>
+        
+    </lightning-card>
+</template>
